@@ -1,0 +1,33 @@
+version: "2"
+
+services:
+    app:
+        image: python:3.7.4-alpine3.10
+        command: sh -c "apk add --no-cache python3 postgresql-libs && apk add --no-cache --virtual .build-deps gcc python3-dev musl-dev postgresql-dev && python3 -m pip install -r /var/www/html/requirements.txt --no-cache-dir && apk --purge del .build-deps && cd /var/www/html/ && python3 manage.py runserver"
+        restart: always
+        ports:
+            - "80:8000"
+        volumes:
+            - $PWD:/var/www/html
+        env_file:
+            - common.env
+
+    postgres:
+        image: postgres:11.4
+        ports:
+            - "5432:5432"
+        restart: always
+        volumes:
+            - $PWD/database/dump:/docker-entrypoint-initdb.d/
+        environment:
+            - "POSTGRES_DB=django_skeleton"
+            - "POSTGRES_USER=postgres"
+            - "POSTGRES_PASSWORD=mysecretpassword"
+
+    migration:
+        image: nasajon/php:7.1-fpm-symfony-dev
+        command: php app/console doctrine:migrations:migrate --no-interaction
+        volumes:
+            - $PWD:/var/www/html
+        env_file:
+            - common.env
