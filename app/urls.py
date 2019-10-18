@@ -9,4 +9,5 @@ from app.view.ping import PingView
 urlpatterns = [
     path('', views.index, name='index'),
     path('ping/', PingView.as_view(), name='ping'),
+    path('ping2/', views.ping2, name='ping2'),
 ]
