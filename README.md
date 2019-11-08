@@ -22,14 +22,10 @@ Segue os passos para a criação de uma nova rota:
 ## Testando a Aplicação
 1. Inicie o banco de dados de exemplo (se desejar):
 ```shell
-docker-compose up postgres
+docker-compose up -d postgres
 ```
-2. Instale as dependências do projeto:
+2. Inicie o sistema do django usando wsgi e nginx:
 ```shell
-sudo python3 -m pip install -r requirements.txt
+docker-compose up -d app
 ```
-3. Inicie o servidor de aplicação de desenvolvimento:
-```shell
-python3 manage.py runserver
-```
-4. Abra a URL: http://localhost:8000 (adicione a rota que desejar, porém há um template de exemplo sendo renderizado no index da aplicação).
+3. Abra a URL: http://localhost:80 (adicione a rota que desejar, porém há um template de exemplo sendo renderizado no index da aplicação).
