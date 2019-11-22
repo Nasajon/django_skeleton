@@ -1,11 +1,16 @@
 # Django vs Flask
+
+## Introdução
+
 No contexto de desenvolvimento Python para WEB, dois frameworks despontam como expoentes de mercado. São eles Django e Flask.
 
 Assim, para o desenvolvimento das funcionalidades python a serem distribuídas enquanto serviço web no contexto da Nasajon, surge de imediato a questão sobre qual o framework mais adequado?
 
 Para responder esta pergunta seguem algumas breves considerações levantadas após rápido esforço de pesquisa. Considerações estas que serão apresentadas em diferentes pontos de vista:
 
-## Popularidade
+## Perspectivas
+
+### Popularidade
 
 |Framework      | Django | Flask |
 |---------------|--------|-------|
@@ -15,7 +20,7 @@ Para responder esta pergunta seguem algumas breves considerações levantadas ap
 
 Como se pode notar, a comparação das métricas referentes aos repositórios de cada framework revelam que não há diferenças substanciais com relação a popularidade comparativa entre eles, antes ambos se revelam aplamente demandados no mercado.
 
-## Funcionalidades e Características
+### Funcionalidades e Características
 
 |Framework                      |Django|Flask|
 |-------------------------------|:----:|:---:|
@@ -44,7 +49,7 @@ Mesmo assim, esta diferença não é imediatamente tido pela comunidade como um 
 
 Portanto, se por um lado, o Django já se apresenta enquanto middleware ou framework mais completo, por outro lado o Flask se apresenta como uma solução mais leve e minimalista.
 
-## Cases
+### Cases
 
 |Django              |Flask          |
 |--------------------|---------------|
@@ -58,13 +63,13 @@ Portanto, se por um lado, o Django já se apresenta enquanto middleware ou frame
 
 Neste ponto o DJango apresenta mais (e importantes) referências. Mesmo assim, o Flask continua apresentando resultados bastante relevantes, uma vez que contém cases como: "LinkedIn" e "Pinterest".
 
-# Conclusão
+## Conclusão
 Conforme se pôde verificar por meio desta breve análise, o Django é mais adequado para aplicações web complexas, enquanto o Flask apresenta menor tempo de aprendizado e mais leveza na execução, sendo então mais adequado para soluções pontuais. Portanto, sugere-se:
 
 * Adoção do Django para soluções cujo escopo seja complexo ou com grande potencial de extensão (e que portanto corram maior risco de despadronização pela maior recorrência de manutenção).
 * Adoção do Flask para soluções pontuais, com pouco esfoço alocado, e de escopo conhecidamente limitado (que dispense também o uso do banco de dados).
 
-# Referências
+## Referências
 * Repositório do Django no Github: https://github.com/django/django, acesso em 22/11/2019, 17:21
 * Repositório do Flask no Github: https://github.com/pallets/flask, acesso em 22/11/2019, 17:21
 * Comparativo Django, Flask: https://www.educba.com/django-vs-flask/, acesso em 22/11/2019, 17:21
