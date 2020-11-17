@@ -86,9 +86,9 @@ elif (db_driver == 'oracle'):
 DATABASES = {
     'default': {
         'ENGINE': db_engine,
-        'NAME': os.getenv('database_name', 'django_skeleton'),
+        'NAME': os.getenv('database_name', 'nasajon'),
         'USER': os.getenv('database_user', 'postgres'),
-        'PASSWORD': os.getenv('database_password', 'mysecretpassword'),
+        'PASSWORD': os.getenv('database_password', 'postgres'),
         'HOST': os.getenv('database_host', 'localhost'),
         'PORT': os.getenv('database_port', '5432'),
     }
